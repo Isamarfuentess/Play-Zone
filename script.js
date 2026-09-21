@@ -112,3 +112,36 @@ document.getElementById("formulario").addEventListener("submit", function(event)
     window.open(url, "_blank");
 
 });
+/* =====================================
+   BUSCADOR DE PAQUETES
+===================================== */
+
+function buscarPaquetes() {
+
+    const texto = document
+        .getElementById("buscarPaquete")
+        .value
+        .toLowerCase();
+
+    const paquetes = document.querySelectorAll(".paquete");
+
+    paquetes.forEach(function(paquete) {
+
+        const nombre = paquete
+            .querySelector("h3")
+            .textContent
+            .toLowerCase();
+
+        if (nombre.includes(texto)) {
+
+            paquete.style.display = "";
+
+        } else {
+
+            paquete.style.display = "none";
+
+        }
+
+    });
+
+}

@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Play Zone | Diversión para tu evento</title>
+
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         BARRA DE NAVEGACIÓN
+    ========================== -->
+
+    <header class="encabezado">
+
+        <div class="logo">
+            <span>Play</span> Zone
+        </div>
+
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#paquetes">Paquetes</a>
+            <a href="#servicios">Servicios</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+
+        <button class="boton-menu" onclick="mostrarMenu()">
+            ☰
+        </button>
+
+    </header>
+
+
+    <!-- =========================
+         SECCIÓN PRINCIPAL
+    ========================== -->
+
+    <section id="inicio" class="hero">
+
+        <div class="hero-contenido">
+
+            <p class="etiqueta">EVENTOS • FIESTAS • CELEBRACIONES</p>
+
+            <h1>
+                Haz de tu evento una
+                <span>experiencia inolvidable</span>
+            </h1>
+
+            <p class="descripcion">
+                Renta de juegos, máquinas de premios y paquetes de
+                entretenimiento para cumpleaños, fiestas y todo tipo de eventos.
+            </p>
+
+            <div class="hero-botones">
+
+                <a href="#paquetes" class="boton principal">
+                    Ver paquetes
+                </a>
+
+                <a href="#contacto" class="boton secundario">
+                    Solicitar información
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="hero-juegos">
+
+            <div class="icono-juego">⚽</div>
+            <div class="icono-juego">🏀</div>
+            <div class="icono-juego">🏓</div>
+            <div class="icono-juego">🎱</div>
+            <div class="icono-juego">🎁</div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         SERVICIOS
+    ========================== -->
+
+    <section id="servicios" class="servicios">
+
+        <div class="titulo-seccion">
+
+            <p>¿QUÉ OFRECEMOS?</p>
+
+            <h2>
+                Todo lo necesario para
+                <span>divertirte</span>
+            </h2>
+
+        </div>
+
+
+        <div class="servicios-contenedor">
+
+            <div class="servicio">
+
+                <div class="servicio-icono">
+                    🚚
+                </div>
+
+                <h3>Servicio a domicilio</h3>
+
+                <p>
+                    Nosotros llevamos los juegos hasta tu evento,
+                    los instalamos y posteriormente los recogemos.
+                </p>
+
+            </div>
+
+
+            <div class="servicio">
+
+                <div class="servicio-icono">
+                    🎮
+                </div>
+
+                <h3>Juegos para todos</h3>
+
+                <p>
+                    Contamos con diferentes opciones de entretenimiento
+                    para niños, jóvenes y adultos.
+                </p>
+
+            </div>
+
+
+            <div class="servicio">
+
+                <div class="servicio-icono">
+                    🎁
+                </div>
+
+                <h3>Máquina de premios</h3>
+
+                <p>
+                    Agrega emoción a tu evento con nuestra máquina
+                    de premios y premios incluidos.
+                </p>
+
+            </div>
+
+
+            <div class="servicio">
+
+                <div class="servicio-icono">
+                    ⏰
+                </div>
+
+                <h3>4 horas de servicio</h3>
+
+                <p>
+                    Todos nuestros paquetes incluyen cuatro horas
+                    de entretenimiento para tu evento.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         PAQUETES
+    ========================== -->
+
+    <section id="paquetes" class="paquetes">
+
+        <div class="titulo-seccion">
+
+            <p>NUESTROS PAQUETES</p>
+
+            <h2>
+                Elige la opción ideal
+                <span>para tu evento</span>
+            </h2>
+
+            <p class="subtitulo">
+                Tenemos diferentes opciones para adaptarnos
+                a tu celebración y presupuesto.
+            </p>
+
+        </div>
+
+
+        <div class="paquetes-contenedor">
+
+
+            <!-- PAQUETE 1 -->
+
+            <div class="paquete">
+
+                <div class="paquete-superior">
+
+                    <span class="numero">01</span>
+
+                    <h3>Solo Juegos</h3>
+
+                    <div class="precio">
+                        $2,300
+                        <small>MXN</small>
+                    </div>
+
+                </div>
+
+                <p class="horas">
+                    ⏰ 4 HORAS DE SERVICIO
+                </p>
+
+                <ul>
+
+                    <li>🚚 Servicio a domicilio</li>
+
+                    <li>⚽ Futbolito</li>
+
+                    <li>🏀 Básquetbol</li>
+
+                    <li>🏓 Ping Pong</li>
+
+                    <li>🎱 Billar</li>
+
+                </ul>
+
+                <div class="descripcion-paquete">
+
+                    <p>
+                        Ideal si quieres entretenimiento clásico y dinámico.
+                    </p>
+
+                    <strong>
+                        💥 Diversión para niños y adultos
+                    </strong>
+
+                </div>
+
+                <button
+                    class="boton-paquete"
+                    onclick="seleccionarPaquete('Solo Juegos', '2,300')">
+                    Me interesa
+                </button>
+
+            </div>
+
+
+            <!-- PAQUETE 2 -->
+
+            <div class="paquete">
+
+                <div class="paquete-superior">
+
+                    <span class="numero">02</span>
+
+                    <h3>Solo Máquina</h3>
+
+                    <div class="precio">
+                        $2,800
+                        <small>MXN</small>
+                    </div>
+
+                </div>
+
+                <p class="horas">
+                    ⏰ 4 HORAS DE SERVICIO
+                </p>
+
+                <ul>
+
+                    <li>🚚 Servicio a domicilio</li>
+
+                    <li>🎁 Máquina de Premios</li>
+
+                    <li>🎁 30 premios incluidos</li>
+
+                </ul>
+
+                <div class="descripcion-paquete">
+
+                    <p>
+                        Perfecto para eventos pequeños o como atracción principal.
+                    </p>
+
+                    <strong>
+                        🔥 Diversión asegurada para niños
+                    </strong>
+
+                </div>
+
+                <button
+                    class="boton-paquete"
+                    onclick="seleccionarPaquete('Solo Máquina', '2,800')">
+                    Me interesa
+                </button>
+
+            </div>
+
+
+            <!-- PAQUETE 3 -->
+
+            <div class="paquete destacado">
+
+                <div class="etiqueta-popular">
+                    MÁS LLAMATIVO
+                </div>
+
+                <div class="paquete-superior">
+
+                    <span class="numero">03</span>
+
+                    <h3>Máquina Premium</h3>
+
+                    <div class="precio">
+                        $3,300
+                        <small>MXN</small>
+                    </div>
+
+                </div>
+
+                <p class="horas">
+                    ⏰ 4 HORAS DE SERVICIO
+                </p>
+
+                <ul>
+
+                    <li>🚚 Servicio a domicilio</li>
+
+                    <li>🎁 Máquina de Premios</li>
+
+                    <li>🎁 30 premios PREMIUM</li>
+
+                    <li>💎 Premios más grandes y llamativos</li>
+
+                </ul>
+
+                <div class="descripcion-paquete">
+
+                    <p>
+                        Más impacto y emoción en tu evento.
+                    </p>
+
+                    <strong>
+                        🔥 Ideal para llamar la atención
+                    </strong>
+
+                </div>
+
+                <button
+                    class="boton-paquete"
+                    onclick="seleccionarPaquete('Máquina Premium', '3,300')">
+                    Me interesa
+                </button>
+
+            </div>
+
+
+            <!-- PAQUETE 4 -->
+
+            <div class="paquete">
+
+                <div class="paquete-superior">
+
+                    <span class="numero">04</span>
+
+                    <h3>Todo Incluido</h3>
+
+                    <div class="precio">
+                        $3,600
+                        <small>MXN</small>
+                    </div>
+
+                </div>
+
+                <p class="horas">
+                    ⏰ 4 HORAS DE SERVICIO
+                </p>
+
+                <ul>
+
+                    <li>🚚 Servicio a domicilio</li>
+
+                    <li>⚽ Futbolito</li>
+
+                    <li>🏀 Básquetbol</li>
+
+                    <li>🏓 Ping Pong</li>
+
+                    <li>🎱 Billar</li>
+
+                    <li>🎁 Máquina de Premios</li>
+
+                    <li>🎁 30 premios incluidos</li>
+
+                </ul>
+
+                <div class="descripcion-paquete">
+
+                    <p>
+                        Más emoción, competencia y premios.
+                    </p>
+
+                </div>
+
+                <button
+                    class="boton-paquete"
+                    onclick="seleccionarPaquete('Todo Incluido', '3,600')">
+                    Me interesa
+                </button>
+
+            </div>
+
+
+            <!-- PAQUETE 5 -->
+
+            <div class="paquete premium">
+
+                <div class="etiqueta-popular">
+                    PAQUETE PREMIUM
+                </div>
+
+                <div class="paquete-superior">
+
+                    <span class="numero">05</span>
+
+                    <h3>Premium</h3>
+
+                    <div class="precio">
+                        $4,000
+                        <small>MXN</small>
+                    </div>
+
+                </div>
+
+                <p class="horas">
+                    ⏰ 4 HORAS DE SERVICIO
+                </p>
+
+                <ul>
+
+                    <li>🚚 Servicio a domicilio</li>
+
+                    <li>🎮 Todos los juegos incluidos</li>
+
+                    <li>🎁 Máquina de Premios</li>
+
+                    <li>🎁 30 premios PREMIUM</li>
+
+                    <li>💎 Premios más grandes y llamativos</li>
+
+                </ul>
+
+                <div class="descripcion-paquete">
+
+                    <p>
+                        Presentación más impactante para que tu evento
+                        luzca al máximo.
+                    </p>
+
+                    <strong>
+                        🔥 Haz que tu evento destaque
+                    </strong>
+
+                </div>
+
+                <button
+                    class="boton-paquete"
+                    onclick="seleccionarPaquete('Premium', '4,000')">
+                    Me interesa
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         SECCIÓN DESTACADA
+    ========================== -->
+
+    <section class="experiencia">
+
+        <div>
+
+            <p class="etiqueta">TU EVENTO, TU EXPERIENCIA</p>
+
+            <h2>
+                Más juegos.
+                <span>Más diversión.</span>
+                Más recuerdos.
+            </h2>
+
+            <p>
+                Ya sea un cumpleaños, una reunión familiar,
+                una celebración o cualquier evento especial,
+                tenemos opciones para convertirlo en un momento
+                que todos recuerden.
+            </p>
+
+        </div>
+
+        <div class="experiencia-datos">
+
+            <div>
+                <strong>4</strong>
+                <span>Horas de servicio</span>
+            </div>
+
+            <div>
+                <strong>5</strong>
+                <span>Paquetes disponibles</span>
+            </div>
+
+            <div>
+                <strong>30+</strong>
+                <span>Premios disponibles</span>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONTACTO
+    ========================== -->
+
+    <section id="contacto" class="contacto">
+
+        <div class="titulo-seccion">
+
+            <p>RESERVA O INFORMACIÓN</p>
+
+            <h2>
+                ¿Listo para hacer tu
+                <span>evento diferente?</span>
+            </h2>
+
+        </div>
+
+
+        <div class="contacto-contenedor">
+
+            <div class="contacto-info">
+
+                <h3>Contáctanos</h3>
+
+                <p>
+                    Selecciona uno de nuestros paquetes y
+                    solicita información sobre disponibilidad.
+                </p>
+
+                <div class="dato-contacto">
+                    📱
+                    <div>
+                        <strong>Teléfono</strong>
+                        <span>6651372958</span>
+                    </div>
+                </div>
+
+                <div class="dato-contacto">
+                    📍
+                    <div>
+                        <strong>Servicio</strong>
+                        <span>A domicilio</span>
+                    </div>
+                </div>
+
+                <div class="dato-contacto">
+                    ⏰
+                    <div>
+                        <strong>Duración</strong>
+                        <span>4 horas</span>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <form id="formulario">
+
+                <label>Nombre</label>
+
+                <input
+                    type="text"
+                    id="nombre"
+                    placeholder="Escribe tu nombre"
+                    required>
+
+
+                <label>Paquete de interés</label>
+
+                <select id="paquete" required>
+
+                    <option value="">
+                        Selecciona un paquete
+                    </option>
+
+                    <option value="Solo Juegos">
+                        Solo Juegos - $2,300
+                    </option>
+
+                    <option value="Solo Máquina">
+                        Solo Máquina - $2,800
+                    </option>
+
+                    <option value="Máquina Premium">
+                        Máquina Premium - $3,300
+                    </option>
+
+                    <option value="Todo Incluido">
+                        Todo Incluido - $3,600
+                    </option>
+
+                    <option value="Premium">
+                        Premium - $4,000
+                    </option>
+
+                </select>
+
+
+                <label>Mensaje</label>
+
+                <textarea
+                    id="mensaje"
+                    placeholder="Cuéntanos sobre tu evento..."
+                    required></textarea>
+
+
+                <button type="submit" class="boton enviar">
+                    Solicitar información
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         PIE DE PÁGINA
+    ========================== -->
+
+    <footer>
+
+        <div class="logo">
+            <span>Play</span> Zone
+        </div>
+
+        <p>
+            Diversión para tus mejores momentos.
+        </p>
+
+        <p class="copyright">
+            © 2026 Play Zone. Todos los derechos reservados.
+        </p>
+
+    </footer>
+
+
+    <!-- MODAL -->
+
+    <div id="modal" class="modal">
+
+        <div class="modal-contenido">
+
+            <button class="cerrar" onclick="cerrarModal()">
+                ×
+            </button>
+
+            <div class="modal-icono">
+                🎉
+            </div>
+
+            <h2>¡Excelente elección!</h2>
+
+            <p id="mensajeModal"></p>
+
+            <button
+                class="boton principal"
+                onclick="cerrarModal()">
+                Continuar
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -830,3 +830,27 @@ footer .copyright {
         flex-direction: column;
     }
 }
+/* =====================================
+   BUSCADOR DE PAQUETES
+===================================== */
+
+.buscador-paquetes {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.buscador-paquetes input {
+    width: 100%;
+    max-width: 500px;
+    padding: 15px 20px;
+    font-size: 16px;
+    border: 2px solid #2aa7df;
+    border-radius: 10px;
+    outline: none;
+    background-color: white;
+}
+
+.buscador-paquetes input:focus {
+    border-color: #18242c;
+}

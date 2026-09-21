@@ -77,7 +77,7 @@ window.onclick = function(event) {
 
 
 /* =====================================
-   FORMULARIO
+   FORMULARIO - WHATSAPP
 ===================================== */
 
 document.getElementById("formulario").addEventListener("submit", function(event) {
@@ -85,9 +85,7 @@ document.getElementById("formulario").addEventListener("submit", function(event)
     event.preventDefault();
 
     const nombre = document.getElementById("nombre").value;
-
     const paquete = document.getElementById("paquete").value;
-
     const mensaje = document.getElementById("mensaje").value;
 
     if (nombre === "" || paquete === "" || mensaje === "") {
@@ -97,16 +95,20 @@ document.getElementById("formulario").addEventListener("submit", function(event)
         return;
     }
 
-    alert(
-        "¡Gracias, " +
-        nombre +
-        "!\n\n" +
-        "Paquete seleccionado: " +
-        paquete +
-        "\n\n" +
-        "Tu solicitud ha sido registrada."
-    );
+    // Número de WhatsApp de Play Zone
+    const telefono = "526651218502";
 
-    document.getElementById("formulario").reset();
+    const texto =
+        "Hola, soy " + nombre +
+        ".\n\nEstoy interesado(a) en el paquete: " + paquete +
+        ".\n\nMensaje: " + mensaje;
+
+    const url =
+        "https://wa.me/" +
+        telefono +
+        "?text=" +
+        encodeURIComponent(texto);
+
+    window.open(url, "_blank");
 
 });

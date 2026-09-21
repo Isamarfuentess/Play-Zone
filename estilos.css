@@ -1,5 +1,5 @@
 /* =====================================
-   CONFIGURACIÓN GENERAL
+   GENERAL
 ===================================== */
 
 * {
@@ -17,6 +17,7 @@ body {
     background-color: #050817;
     color: #ffffff;
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
 
@@ -26,7 +27,8 @@ body {
 
 .encabezado {
     width: 100%;
-    padding: 20px 7%;
+    min-height: 72px;
+    padding: 15px 7%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -53,7 +55,7 @@ nav {
 }
 
 nav a {
-    color: #ffffff;
+    color: white;
     text-decoration: none;
     font-size: 15px;
     transition: 0.3s;
@@ -63,12 +65,86 @@ nav a:hover {
     color: #ff2ca8;
 }
 
+
+/* =====================================
+   ICONOS DEL ENCABEZADO
+===================================== */
+
+.acciones-menu {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.boton-buscar,
 .boton-menu {
-    display: none;
-    background: none;
+    background: transparent;
     border: none;
     color: white;
-    font-size: 28px;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.boton-buscar {
+    font-size: 22px;
+}
+
+.boton-menu {
+    display: none;
+    font-size: 30px;
+}
+
+
+/* =====================================
+   BUSCADOR
+===================================== */
+
+.panel-buscador {
+    display: none;
+    width: 100%;
+    padding: 15px 7%;
+    background-color: #070b1c;
+    border-bottom: 1px solid #243cff;
+    position: sticky;
+    top: 72px;
+    z-index: 999;
+}
+
+.buscador-contenido {
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+    display: flex;
+    gap: 12px;
+}
+
+.buscador-contenido input {
+    flex: 1;
+}
+
+.buscador-contenido select {
+    width: 240px;
+}
+
+.buscador-contenido input,
+.buscador-contenido select {
+    padding: 14px 15px;
+    border: 1px solid #28427c;
+    border-radius: 8px;
+    background-color: #0b1328;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    outline: none;
+}
+
+.buscador-contenido input:focus,
+.buscador-contenido select:focus {
+    border-color: #00bfff;
+}
+
+.buscador-contenido input::placeholder {
+    color: #8f9bb3;
 }
 
 
@@ -141,7 +217,7 @@ nav a:hover {
 
 .boton.principal {
     background-color: #ff2ca8;
-    color: #ffffff;
+    color: white;
     box-shadow: 0 0 15px rgba(255, 44, 168, 0.35);
 }
 
@@ -163,7 +239,7 @@ nav a:hover {
 
 
 /* =====================================
-   ICONOS DEL HERO
+   ICONOS HERO
 ===================================== */
 
 .hero-juegos {
@@ -180,26 +256,19 @@ nav a:hover {
     width: 130px;
     height: 130px;
     border-radius: 20px;
-
     background-color: #0c1530;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     font-size: 60px;
-
     border: 2px solid #243cff;
-
     box-shadow: 0 0 15px rgba(36, 60, 255, 0.25);
-
     transition: 0.3s;
 }
 
 .icono-juego:hover {
     transform: scale(1.08) rotate(3deg);
     border-color: #ff2ca8;
-    box-shadow: 0 0 20px rgba(255, 44, 168, 0.4);
 }
 
 .icono-juego:last-child {
@@ -208,7 +277,7 @@ nav a:hover {
 
 
 /* =====================================
-   TÍTULOS DE SECCIÓN
+   TÍTULOS
 ===================================== */
 
 .titulo-seccion {
@@ -259,16 +328,13 @@ nav a:hover {
     background-color: #0d1730;
     padding: 35px 25px;
     border-radius: 12px;
-
     border: 1px solid #1c3b7a;
-
     transition: 0.3s;
 }
 
 .servicio:hover {
     transform: translateY(-8px);
     border-color: #00bfff;
-    box-shadow: 0 0 20px rgba(0, 191, 255, 0.15);
 }
 
 .servicio-icono {
@@ -304,27 +370,19 @@ nav a:hover {
 
 .paquete {
     background-color: #0b1328;
-
     border: 1px solid #20356c;
-
     border-radius: 14px;
     padding: 30px;
-
     position: relative;
-
     display: flex;
     flex-direction: column;
-
     transition: 0.3s;
 }
 
 .paquete:hover {
     transform: translateY(-8px);
-
     border-color: #00bfff;
-
-    box-shadow:
-        0 0 20px rgba(0, 191, 255, 0.15);
+    box-shadow: 0 0 20px rgba(0, 191, 255, 0.15);
 }
 
 .paquete-superior {
@@ -355,7 +413,7 @@ nav a:hover {
 }
 
 .horas {
-    color: #ffffff;
+    color: white;
     font-size: 13px;
     font-weight: bold;
     margin-bottom: 20px;
@@ -376,74 +434,50 @@ nav a:hover {
 .descripcion-paquete {
     margin-top: 15px;
     margin-bottom: 25px;
-
     color: #9ba8bd;
-
     font-size: 14px;
 }
 
 .descripcion-paquete strong {
     display: block;
-    color: #ffffff;
+    color: white;
     margin-top: 8px;
 }
 
 .boton-paquete {
     margin-top: auto;
     width: 100%;
-
     padding: 13px;
-
     border: 2px solid #ff2ca8;
-
     background-color: transparent;
-
     color: #ff2ca8;
-
     border-radius: 7px;
-
     font-weight: bold;
-
     cursor: pointer;
-
     transition: 0.3s;
 }
 
 .boton-paquete:hover {
     background-color: #ff2ca8;
-    color: #ffffff;
-
-    box-shadow: 0 0 15px rgba(255, 44, 168, 0.35);
+    color: white;
 }
 
 
-/* =====================================
-   PAQUETES DESTACADOS
-===================================== */
+/* DESTACADOS */
 
 .destacado {
     border: 2px solid #ff2ca8;
-
-    box-shadow:
-        0 0 20px rgba(255, 44, 168, 0.12);
 }
 
 .etiqueta-popular {
     position: absolute;
-
     top: -13px;
     right: 20px;
-
     background-color: #ff2ca8;
-
-    color: #ffffff;
-
+    color: white;
     padding: 5px 12px;
-
     border-radius: 20px;
-
     font-size: 11px;
-
     font-weight: bold;
 }
 
@@ -463,23 +497,15 @@ nav a:hover {
 
 .experiencia {
     padding: 80px 7%;
-
-    background:
-        linear-gradient(
-            120deg,
-            #101c54,
-            #471052,
-            #101c54
-        );
-
-    color: #ffffff;
-
+    background: linear-gradient(
+        120deg,
+        #101c54,
+        #471052,
+        #101c54
+    );
     display: flex;
-
     align-items: center;
-
     justify-content: space-between;
-
     gap: 50px;
 }
 
@@ -516,9 +542,7 @@ nav a:hover {
 
 .experiencia-datos strong {
     display: block;
-
     font-size: 40px;
-
     color: #ffd21f;
 }
 
@@ -533,41 +557,31 @@ nav a:hover {
 
 .contacto {
     padding: 100px 7%;
-
     background-color: #080d20;
 }
 
 .contacto-contenedor {
     max-width: 1000px;
-
     margin: auto;
-
     display: grid;
-
     grid-template-columns: 1fr 1fr;
-
     gap: 60px;
 }
 
 .contacto-info h3 {
     font-size: 30px;
-
     margin-bottom: 15px;
 }
 
 .contacto-info > p {
     color: #aab5c9;
-
     margin-bottom: 30px;
 }
 
 .dato-contacto {
     display: flex;
-
     gap: 15px;
-
     align-items: center;
-
     margin-bottom: 20px;
 }
 
@@ -578,25 +592,19 @@ nav a:hover {
 
 .dato-contacto span {
     color: #8f9bb3;
-
     font-size: 14px;
 }
 
 form {
     background-color: #0d1730;
-
     padding: 30px;
-
     border-radius: 12px;
-
     border: 1px solid #20356c;
 }
 
 form label {
     display: block;
-
     margin-bottom: 7px;
-
     font-size: 14px;
 }
 
@@ -604,25 +612,17 @@ form input,
 form select,
 form textarea {
     width: 100%;
-
     padding: 13px;
-
     margin-bottom: 18px;
-
     background-color: #050817;
-
     border: 1px solid #28427c;
-
     border-radius: 6px;
-
     color: white;
-
-    font-family: Arial;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 form textarea {
     height: 120px;
-
     resize: none;
 }
 
@@ -630,10 +630,7 @@ form input:focus,
 form select:focus,
 form textarea:focus {
     outline: none;
-
     border-color: #00bfff;
-
-    box-shadow: 0 0 8px rgba(0, 191, 255, 0.15);
 }
 
 .enviar {
@@ -647,23 +644,18 @@ form textarea:focus {
 
 footer {
     padding: 35px 7%;
-
     background-color: #03050d;
-
     text-align: center;
-
     border-top: 1px solid #162653;
 }
 
 footer p {
     color: #8995ab;
-
     font-size: 14px;
 }
 
 footer .copyright {
     margin-top: 15px;
-
     font-size: 12px;
 }
 
@@ -674,44 +666,27 @@ footer .copyright {
 
 .modal {
     display: none;
-
     position: fixed;
-
     z-index: 2000;
-
     inset: 0;
-
     background-color: rgba(0, 0, 0, 0.80);
-
     align-items: center;
-
     justify-content: center;
 }
 
 .modal-contenido {
     background-color: #0d1730;
-
     width: 90%;
-
     max-width: 450px;
-
     padding: 40px;
-
     border-radius: 15px;
-
     text-align: center;
-
     position: relative;
-
     border: 2px solid #ff2ca8;
-
-    box-shadow:
-        0 0 30px rgba(255, 44, 168, 0.25);
 }
 
 .modal-icono {
     font-size: 55px;
-
     margin-bottom: 15px;
 }
 
@@ -721,40 +696,30 @@ footer .copyright {
 
 .modal-contenido p {
     color: #aeb9bf;
-
     margin-bottom: 25px;
 }
 
 .cerrar {
     position: absolute;
-
     top: 10px;
-
     right: 15px;
-
     background: none;
-
     border: none;
-
     color: white;
-
     font-size: 30px;
-
     cursor: pointer;
 }
 
 
 /* =====================================
-   RESPONSIVE
+   TABLET
 ===================================== */
 
 @media (max-width: 1000px) {
 
     .hero {
         flex-direction: column;
-
         text-align: center;
-
         gap: 50px;
     }
 
@@ -772,11 +737,14 @@ footer .copyright {
 
     .experiencia {
         flex-direction: column;
-
         text-align: center;
     }
 }
 
+
+/* =====================================
+   CELULAR
+===================================== */
 
 @media (max-width: 700px) {
 
@@ -786,6 +754,14 @@ footer .copyright {
 
     .boton-menu {
         display: block;
+    }
+
+    .encabezado {
+        padding: 15px 5%;
+    }
+
+    .hero {
+        padding: 70px 7%;
     }
 
     .hero h1 {
@@ -800,7 +776,6 @@ footer .copyright {
     .icono-juego {
         width: 100px;
         height: 100px;
-
         font-size: 45px;
     }
 
@@ -822,35 +797,19 @@ footer .copyright {
 
     .experiencia-datos {
         flex-wrap: wrap;
-
         justify-content: center;
     }
 
     .hero-botones {
         flex-direction: column;
     }
-}
-/* =====================================
-   BUSCADOR DE PAQUETES
-===================================== */
 
-.buscador-paquetes {
-    display: flex;
-    justify-content: center;
-    margin: 30px 0;
-}
+    .buscador-contenido {
+        flex-direction: column;
+    }
 
-.buscador-paquetes input {
-    width: 100%;
-    max-width: 500px;
-    padding: 15px 20px;
-    font-size: 16px;
-    border: 2px solid #2aa7df;
-    border-radius: 10px;
-    outline: none;
-    background-color: white;
-}
+    .buscador-contenido select {
+        width: 100%;
+    }
 
-.buscador-paquetes input:focus {
-    border-color: #18242c;
 }

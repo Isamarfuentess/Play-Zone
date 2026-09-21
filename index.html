@@ -4,47 +4,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Play Zone | Diversión para tu evento</title>
-
     <link rel="stylesheet" href="estilos.css">
 </head>
 
 <body>
 
-    <!-- =========================
-         BARRA DE NAVEGACIÓN
-    ========================== -->
-
+    <!-- ENCABEZADO -->
     <header class="encabezado">
 
         <div class="logo">
             <span>Play</span> Zone
         </div>
 
-        <nav>
+        <nav id="menuNavegacion">
             <a href="#inicio">Inicio</a>
             <a href="#paquetes">Paquetes</a>
             <a href="#servicios">Servicios</a>
             <a href="#contacto">Contacto</a>
         </nav>
 
-        <button class="boton-menu" onclick="mostrarMenu()">
-            ☰
-        </button>
+        <div class="acciones-menu">
+
+            <button
+                type="button"
+                class="boton-buscar"
+                id="botonBuscar"
+                aria-label="Abrir buscador">
+                🔍
+            </button>
+
+            <button
+                type="button"
+                class="boton-menu"
+                id="botonMenu"
+                aria-label="Abrir menú">
+                ☰
+            </button>
+
+        </div>
 
     </header>
 
 
-    <!-- =========================
-         SECCIÓN PRINCIPAL
-    ========================== -->
+    <!-- BUSCADOR -->
+    <div id="panelBuscador" class="panel-buscador">
 
+        <div class="buscador-contenido">
+
+            <input
+                type="text"
+                id="buscarPaquete"
+                placeholder="🔍 Buscar paquete...">
+
+            <select id="ordenarPaquetes">
+
+                <option value="">
+                    Ordenar por...
+                </option>
+
+                <option value="menor">
+                    Precio: menor a mayor
+                </option>
+
+                <option value="mayor">
+                    Precio: mayor a menor
+                </option>
+
+                <option value="alfabetico">
+                    Nombre: A - Z
+                </option>
+
+            </select>
+
+        </div>
+
+    </div>
+
+
+    <!-- INICIO -->
     <section id="inicio" class="hero">
 
         <div class="hero-contenido">
 
-            <p class="etiqueta">EVENTOS • FIESTAS • CELEBRACIONES</p>
+            <p class="etiqueta">
+                EVENTOS • FIESTAS • CELEBRACIONES
+            </p>
 
             <h1>
                 Haz de tu evento una
@@ -70,6 +115,7 @@
 
         </div>
 
+
         <div class="hero-juegos">
 
             <div class="icono-juego">⚽</div>
@@ -83,10 +129,7 @@
     </section>
 
 
-    <!-- =========================
-         SERVICIOS
-    ========================== -->
-
+    <!-- SERVICIOS -->
     <section id="servicios" class="servicios">
 
         <div class="titulo-seccion">
@@ -104,66 +147,42 @@
         <div class="servicios-contenedor">
 
             <div class="servicio">
-
-                <div class="servicio-icono">
-                    🚚
-                </div>
-
+                <div class="servicio-icono">🚚</div>
                 <h3>Servicio a domicilio</h3>
-
                 <p>
                     Nosotros llevamos los juegos hasta tu evento,
                     los instalamos y posteriormente los recogemos.
                 </p>
-
             </div>
 
 
             <div class="servicio">
-
-                <div class="servicio-icono">
-                    🎮
-                </div>
-
+                <div class="servicio-icono">🎮</div>
                 <h3>Juegos para todos</h3>
-
                 <p>
                     Contamos con diferentes opciones de entretenimiento
                     para niños, jóvenes y adultos.
                 </p>
-
             </div>
 
 
             <div class="servicio">
-
-                <div class="servicio-icono">
-                    🎁
-                </div>
-
+                <div class="servicio-icono">🎁</div>
                 <h3>Máquina de premios</h3>
-
                 <p>
                     Agrega emoción a tu evento con nuestra máquina
                     de premios y premios incluidos.
                 </p>
-
             </div>
 
 
             <div class="servicio">
-
-                <div class="servicio-icono">
-                    ⏰
-                </div>
-
+                <div class="servicio-icono">⏰</div>
                 <h3>4 horas de servicio</h3>
-
                 <p>
                     Todos nuestros paquetes incluyen cuatro horas
                     de entretenimiento para tu evento.
                 </p>
-
             </div>
 
         </div>
@@ -171,10 +190,7 @@
     </section>
 
 
-    <!-- =========================
-         PAQUETES
-    ========================== -->
-
+    <!-- PAQUETES -->
     <section id="paquetes" class="paquetes">
 
         <div class="titulo-seccion">
@@ -192,26 +208,16 @@
             </p>
 
         </div>
-<!-- =========================
-     BUSCADOR DE PAQUETES
-========================== -->
 
-<div class="buscador-paquetes">
 
-    <input
-        type="text"
-        id="buscarPaquete"
-        placeholder="🔍 Buscar paquete..."
-        onkeyup="buscarPaquetes()">
-
-</div>
-
-        <div class="paquetes-contenedor">
+        <div class="paquetes-contenedor" id="contenedorPaquetes">
 
 
             <!-- PAQUETE 1 -->
-
-            <div class="paquete">
+            <div
+                class="paquete"
+                data-precio="2300"
+                data-nombre="Solo Juegos">
 
                 <div class="paquete-superior">
 
@@ -231,17 +237,11 @@
                 </p>
 
                 <ul>
-
                     <li>🚚 Servicio a domicilio</li>
-
                     <li>⚽ Futbolito</li>
-
                     <li>🏀 Básquetbol</li>
-
                     <li>🏓 Ping Pong</li>
-
                     <li>🎱 Billar</li>
-
                 </ul>
 
                 <div class="descripcion-paquete">
@@ -266,8 +266,10 @@
 
 
             <!-- PAQUETE 2 -->
-
-            <div class="paquete">
+            <div
+                class="paquete"
+                data-precio="2800"
+                data-nombre="Solo Máquina">
 
                 <div class="paquete-superior">
 
@@ -287,13 +289,9 @@
                 </p>
 
                 <ul>
-
                     <li>🚚 Servicio a domicilio</li>
-
                     <li>🎁 Máquina de Premios</li>
-
                     <li>🎁 30 premios incluidos</li>
-
                 </ul>
 
                 <div class="descripcion-paquete">
@@ -318,8 +316,10 @@
 
 
             <!-- PAQUETE 3 -->
-
-            <div class="paquete destacado">
+            <div
+                class="paquete destacado"
+                data-precio="3300"
+                data-nombre="Máquina Premium">
 
                 <div class="etiqueta-popular">
                     MÁS LLAMATIVO
@@ -343,15 +343,10 @@
                 </p>
 
                 <ul>
-
                     <li>🚚 Servicio a domicilio</li>
-
                     <li>🎁 Máquina de Premios</li>
-
                     <li>🎁 30 premios PREMIUM</li>
-
                     <li>💎 Premios más grandes y llamativos</li>
-
                 </ul>
 
                 <div class="descripcion-paquete">
@@ -376,8 +371,10 @@
 
 
             <!-- PAQUETE 4 -->
-
-            <div class="paquete">
+            <div
+                class="paquete"
+                data-precio="3600"
+                data-nombre="Todo Incluido">
 
                 <div class="paquete-superior">
 
@@ -397,21 +394,13 @@
                 </p>
 
                 <ul>
-
                     <li>🚚 Servicio a domicilio</li>
-
                     <li>⚽ Futbolito</li>
-
                     <li>🏀 Básquetbol</li>
-
                     <li>🏓 Ping Pong</li>
-
                     <li>🎱 Billar</li>
-
                     <li>🎁 Máquina de Premios</li>
-
                     <li>🎁 30 premios incluidos</li>
-
                 </ul>
 
                 <div class="descripcion-paquete">
@@ -432,8 +421,10 @@
 
 
             <!-- PAQUETE 5 -->
-
-            <div class="paquete premium">
+            <div
+                class="paquete premium"
+                data-precio="4000"
+                data-nombre="Premium">
 
                 <div class="etiqueta-popular">
                     PAQUETE PREMIUM
@@ -457,17 +448,11 @@
                 </p>
 
                 <ul>
-
                     <li>🚚 Servicio a domicilio</li>
-
                     <li>🎮 Todos los juegos incluidos</li>
-
                     <li>🎁 Máquina de Premios</li>
-
                     <li>🎁 30 premios PREMIUM</li>
-
                     <li>💎 Premios más grandes y llamativos</li>
-
                 </ul>
 
                 <div class="descripcion-paquete">
@@ -496,15 +481,14 @@
     </section>
 
 
-    <!-- =========================
-         SECCIÓN DESTACADA
-    ========================== -->
-
+    <!-- EXPERIENCIA -->
     <section class="experiencia">
 
         <div>
 
-            <p class="etiqueta">TU EVENTO, TU EXPERIENCIA</p>
+            <p class="etiqueta">
+                TU EVENTO, TU EXPERIENCIA
+            </p>
 
             <h2>
                 Más juegos.
@@ -520,6 +504,7 @@
             </p>
 
         </div>
+
 
         <div class="experiencia-datos">
 
@@ -543,10 +528,7 @@
     </section>
 
 
-    <!-- =========================
-         CONTACTO
-    ========================== -->
-
+    <!-- CONTACTO -->
     <section id="contacto" class="contacto">
 
         <div class="titulo-seccion">
@@ -601,7 +583,7 @@
 
             <form id="formulario">
 
-                <label>Nombre</label>
+                <label for="nombre">Nombre</label>
 
                 <input
                     type="text"
@@ -610,7 +592,9 @@
                     required>
 
 
-                <label>Paquete de interés</label>
+                <label for="paquete">
+                    Paquete de interés
+                </label>
 
                 <select id="paquete" required>
 
@@ -641,7 +625,9 @@
                 </select>
 
 
-                <label>Mensaje</label>
+                <label for="mensaje">
+                    Mensaje
+                </label>
 
                 <textarea
                     id="mensaje"
@@ -649,7 +635,9 @@
                     required></textarea>
 
 
-                <button type="submit" class="boton enviar">
+                <button
+                    type="submit"
+                    class="boton enviar">
                     Solicitar información
                 </button>
 
@@ -660,10 +648,7 @@
     </section>
 
 
-    <!-- =========================
-         PIE DE PÁGINA
-    ========================== -->
-
+    <!-- FOOTER -->
     <footer>
 
         <div class="logo">
@@ -682,12 +667,13 @@
 
 
     <!-- MODAL -->
-
     <div id="modal" class="modal">
 
         <div class="modal-contenido">
 
-            <button class="cerrar" onclick="cerrarModal()">
+            <button
+                class="cerrar"
+                onclick="cerrarModal()">
                 ×
             </button>
 
@@ -710,6 +696,7 @@
     </div>
 
 
+    <!-- JAVASCRIPT -->
     <script src="script.js"></script>
 
 </body>
